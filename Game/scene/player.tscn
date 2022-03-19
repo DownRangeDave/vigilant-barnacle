@@ -39,6 +39,7 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0
 shape = SubResource( 1 )
 
 [node name="ship2" parent="SpaceBody" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185083, -0.0257368, 0.121082 )
 
 [node name="MeshInstance" type="MeshInstance" parent="SpaceBody/ship2"]
 mesh = ExtResource( 3 )

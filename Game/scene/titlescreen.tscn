@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://SFX/Chiptune Techno.mp3" type="AudioStream" id=1]
 [ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=2]
@@ -36,6 +36,22 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 5
+emission_ring_radius = 551.01
+emission_ring_inner_radius = 0.0
+emission_ring_height = 0.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+gravity = Vector3( 50, 0, 0 )
+initial_velocity = 156.86
+angular_velocity_random = 0.18
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -13.73
+linear_accel_random = 0.11
+scale = 20.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -79,6 +95,13 @@ custom_fonts/font = SubResource( 5 )
 text = "Start"
 align = 1
 script = ExtResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 104, 264 )
+amount = 30
+lifetime = 3.0
+speed_scale = 3.18
+process_material = SubResource( 6 )
 
 [connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]
 [connection signal="item_focused" from="HUD/Control/startButton" to="HUD/Control/startButton" method="_on_startButton_item_focused"]

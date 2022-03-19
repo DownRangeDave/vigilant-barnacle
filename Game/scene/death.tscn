@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scene/tryAgain.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_left = 152.0
+margin_top = 48.0
+margin_right = 192.0
+margin_bottom = 88.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 120.0
+margin_top = -16.0
+margin_right = 624.0
+margin_bottom = 216.0
+custom_fonts/normal_font = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="tryAgain" type="Button" parent="CanvasLayer/Control"]
+anchor_left = 2.4
+anchor_top = 3.0
+anchor_right = 2.4
+anchor_bottom = 3.0
+margin_left = 200.0
+margin_top = 128.0
+margin_right = 344.0
+margin_bottom = 160.0
+text = "Try Again?"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="CanvasLayer/Control/tryAgain" to="CanvasLayer/Control/tryAgain" method="_on_tryAgain_pressed"]
