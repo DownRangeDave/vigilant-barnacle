@@ -11,6 +11,7 @@ var mob = preload("res://scene/Mob.tscn")
 func _ready():
 	var player1 = shipP1.instance()
 	get_tree().get_root().add_child(player1)
+	yield(get_tree().create_timer(0.3), "timeout")
 	$AudioStreamPlayer.play()
 		
 
