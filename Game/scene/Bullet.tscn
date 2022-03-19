@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape" id=1]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="CubeMesh" id=5]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0.870588, 0, 1 )
@@ -23,7 +23,7 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
-mesh = SubResource( 2 )
+mesh = SubResource( 5 )
 material/0 = SubResource( 3 )
 
 [node name="Area" type="Area" parent="KinematicBody"]
@@ -32,5 +32,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0210891, 0, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody/Area"]
 transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 0.75, 0, 0, 0 )
 shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.6
+one_shot = true
 
 [connection signal="body_entered" from="KinematicBody/Area" to="." method="_on_Area_body_entered"]

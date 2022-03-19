@@ -32,7 +32,7 @@ func movement():
 		$SpaceBody.set_translation(Vector3($SpaceBody.get_translation().x,($SpaceBody.get_translation().y)+speedmodifier,0))
 	if Input.is_action_pressed("ui_accept"):
 			if $Timer.get_time_left() < .005:
-				
+				$bulletSFX.play()
 				get_tree().get_root().add_child(object)
 			#object.set_translation = Vector3($SpaceBody.get_translation())                 
 				object.translation = Vector3($SpaceBody.get_translation().x-2.5,$SpaceBody.get_translation().y,
@@ -53,4 +53,5 @@ func _on_Area_body_entered(body):
 	#print(body.name)
 	if body.name == "Mob" or body.name == "mobBoss":
 		queue_free()
+		get_tree().change_scene("res://scene/death.tscn")
 	

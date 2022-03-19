@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://ship2.glb" type="PackedScene" id=2]
 [ext_resource path="res://Blender Assests/ship2.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://SFX/mixkit-short-laser-gun-shot-1670.wav" type="AudioStream" id=4]
 
 [sub_resource type="Environment" id=7]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -121,5 +122,10 @@ visibility_aabb = AABB( -6.74645, -15.8579, -0.588102, 11.4949, 27.2823, 2.51409
 process_material = SubResource( 2 )
 draw_pass_1 = SubResource( 4 )
 
+
 [connection signal="area_entered" from="SpaceBody/Area" to="." method="_on_Area_area_entered"]
+
+[node name="bulletSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
 [connection signal="body_entered" from="SpaceBody/Area" to="." method="_on_Area_body_entered"]
