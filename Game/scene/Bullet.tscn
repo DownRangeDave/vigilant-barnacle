@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bullet.gd" type="Script" id=1]
 
@@ -8,6 +8,9 @@
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0.870588, 0, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 1, 1.38558 )
 
 [node name="Bullet" type="Spatial"]
 script = ExtResource( 1 )
@@ -21,3 +24,12 @@ shape = SubResource( 1 )
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
+
+[node name="Area" type="Area" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0210891, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/Area"]
+transform = Transform( 1.1, 0, 0, 0, 1.1, 0, 0, 0, 0.75, 0, 0, 0 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="KinematicBody/Area" to="." method="_on_Area_body_entered"]
