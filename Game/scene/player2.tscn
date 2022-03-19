@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://PlayerMovement.gd" type="Script" id=1]
-[ext_resource path="res://ship2.glb" type="PackedScene" id=2]
-[ext_resource path="res://Blender Assests/ship2.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://SFX/mixkit-short-laser-gun-shot-1670.wav" type="AudioStream" id=4]
+[ext_resource path="res://SFX/mixkit-short-laser-gun-shot-1670.wav" type="AudioStream" id=1]
+[ext_resource path="res://Blender Assests/ship2.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://scene/player2.gd" type="Script" id=3]
+[ext_resource path="res://ship2.glb" type="PackedScene" id=4]
 
 [sub_resource type="Environment" id=7]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -34,7 +34,7 @@ material = SubResource( 6 )
 size = Vector3( 1, 0.35, 2 )
 
 [node name="Spatial2" type="Spatial"]
-script = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 7 )
@@ -60,11 +60,11 @@ transform = Transform( -15, 2.26494e-06, 6.60024e-14, 0, -6.55671e-07, 10, 2.264
 transform = Transform( 1, -7.10543e-14, -8.47033e-22, 7.10543e-14, 1, -4.23516e-22, 5.92923e-21, 1.69407e-21, 1, -0.0896865, -0.00171176, 0.0130181 )
 shape = SubResource( 8 )
 
-[node name="ship2" parent="SpaceBody" instance=ExtResource( 2 )]
+[node name="ship2" parent="SpaceBody" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185083, -0.0257368, 0.121082 )
 
 [node name="MeshInstance" type="MeshInstance" parent="SpaceBody/ship2"]
-mesh = ExtResource( 3 )
+mesh = ExtResource( 2 )
 skeleton = NodePath("")
 material/0 = null
 material/1 = null
@@ -128,7 +128,7 @@ process_material = SubResource( 2 )
 draw_pass_1 = SubResource( 4 )
 
 [node name="bulletSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 1 )
 
 [connection signal="area_entered" from="SpaceBody/Area" to="." method="_on_Area_area_entered"]
 [connection signal="body_entered" from="SpaceBody/Area" to="." method="_on_Area_body_entered"]
