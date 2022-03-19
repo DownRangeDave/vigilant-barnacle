@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://spawners.gd" type="Script" id=1]
+[ext_resource path="res://spawnings.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.234482, 0.983456, 0.911478 )
+
+[sub_resource type="BoxShape" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Area" type="Area" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="worldSpawns" type="KinematicBody" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="firstspawner6" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.82959e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 279.305, -2.44176e-05, -8.82419e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner6"]
+shape = SubResource( 2 )
+
+[node name="firstspawner7" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.69407e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 314.693, -2.75113e-05, -8.28471e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner7"]
+shape = SubResource( 2 )
+
+[node name="firstspawner8" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.49078e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 348.512, -3.04679e-05, -7.66042e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner8"]
+shape = SubResource( 2 )
+
+[node name="firstspawner9" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.35525e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 389.569, -3.40572e-05, -1.03949e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner9"]
+shape = SubResource( 2 )
+
+[node name="firstspawner10" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.21973e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 433.887, -3.79317e-05, -1.32972e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner10"]
+shape = SubResource( 2 )
+
+[node name="firstspawner5" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -6.09864e-20, 6.68149e-21, 10, 0, 1.0842e-19, 0, 10, 240.39, 0.0806484, -0.0410499 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner5"]
+shape = SubResource( 2 )
+
+[node name="firstspawner4" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 0, 6.68149e-21, 10, 0, 5.42101e-20, 0, 10, 200.247, -1.75061e-05, -6.99686e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner4"]
+shape = SubResource( 2 )
+
+[node name="firstspawner2" type="Area" parent="worldSpawns"]
+transform = Transform( 100, 6.6815e-20, 0, 6.68149e-20, 100, 0, 3.25261e-19, 0, 1, 63.3691, 7.22074, -1.12382e-06 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner2"]
+shape = SubResource( 2 )
+
+[node name="firstspawner3" type="Area" parent="worldSpawns"]
+transform = Transform( 100, 6.6815e-20, 0, 6.6815e-20, 100, 0, 1.0842e-19, 0, 1, 140.536, 20.0758, 1.13687e-13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner3"]
+shape = SubResource( 2 )
+
+[node name="firstspawner" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 0, 6.6815e-21, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
+shape = SubResource( 3 )
