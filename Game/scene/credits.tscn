@@ -55,10 +55,14 @@ custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "Gundatsch - [url]https://soundcloud.com/gundatsch[/url]
 
-Nicole Marie T - [url]http://gudstuff.wixsite.com/musicvsart/contact-donate[/url]"
+Nicole Marie T - [url]http://gudstuff.wixsite.com/musicvsart/contact-donate[/url]
+
+https://mixkit.co/free-sound-effects/space-shooter/"
 text = "Gundatsch - https://soundcloud.com/gundatsch
 
-Nicole Marie T - http://gudstuff.wixsite.com/musicvsart/contact-donate"
+Nicole Marie T - http://gudstuff.wixsite.com/musicvsart/contact-donate
+
+https://mixkit.co/free-sound-effects/space-shooter/"
 script = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]

@@ -27,16 +27,6 @@ func _process(delta):
 #	pass
 "
 
-[sub_resource type="DynamicFont" id=2]
-size = 64
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=5]
-font_data = ExtResource( 2 )
-
 [sub_resource type="ParticlesMaterial" id=6]
 emission_shape = 5
 emission_ring_radius = 551.01
@@ -52,6 +42,16 @@ orbit_velocity_random = 0.0
 linear_accel = -13.73
 linear_accel_random = 0.11
 scale = 20.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
 
 [node name="Node2D2" type="Node2D"]
 
@@ -69,6 +69,21 @@ margin_left = 264.0
 margin_top = 16.0
 margin_right = -297.0
 margin_bottom = -381.0
+
+[node name="ColorRect" type="ColorRect" parent="HUD/Control"]
+light_mask = 16
+margin_left = -264.0
+margin_top = -16.0
+margin_right = 760.0
+margin_bottom = 624.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="HUD/Control"]
+position = Vector2( -160, 248 )
+amount = 30
+lifetime = 3.0
+speed_scale = 3.18
+process_material = SubResource( 6 )
 
 [node name="title" type="RichTextLabel" parent="HUD/Control"]
 margin_left = 104.0
@@ -95,13 +110,6 @@ custom_fonts/font = SubResource( 5 )
 text = "Start"
 align = 1
 script = ExtResource( 4 )
-
-[node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 104, 264 )
-amount = 30
-lifetime = 3.0
-speed_scale = 3.18
-process_material = SubResource( 6 )
 
 [connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]
 [connection signal="item_focused" from="HUD/Control/startButton" to="HUD/Control/startButton" method="_on_startButton_item_focused"]

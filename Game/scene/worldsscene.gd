@@ -19,30 +19,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$KinematicBody.move_and_collide(Vector3(.05,0,0))
+	$worldSpawns.move_and_collide(Vector3(5,0,0))
 
 
 func _on_firstspawner_body_entered(body):
 	
 	if body.name == "SpaceBody":
-		var enemy = mob.instance()
-		get_tree().get_root().add_child(enemy)
-		
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func _on_bossSpawner_body_entered(body_rid, body, body_shape_index, local_shape_index):
-	if body.name == "SpaceBody":
-		var boss = mobBoss.instance()
-		boss.translation = Vector3(Autoload.playerPosition1.x-100)
-		$levelMusic.stop()
-		$bossMusic.play()
-		
-		get_tree().get_root().add_child(boss)
 		var enemy1 = mob.instance()
 		var enemy2 = mob.instance()
 		var enemy3 = mob.instance()
@@ -291,3 +273,17 @@ func _on_bossSpawner_body_entered(body_rid, body, body_shape_index, local_shape_
 			get_tree().get_root().add_child(enemy13)
 			get_tree().get_root().add_child(enemy14)
 			get_tree().get_root().add_child(enemy15)
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+func _on_bossSpawner_body_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "SpaceBody":
+		var boss = mobBoss.instance()
+		boss.translation = Vector3(Autoload.playerPosition1.x-100)
+		$levelMusic.stop()
+		$bossMusic.play()
+		
