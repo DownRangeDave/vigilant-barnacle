@@ -1,4 +1,4 @@
-extends Button
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -8,15 +8,8 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	pass # Replace with function body.
-
+	$CanvasLayer/Control/message.text = $CanvasLayer/Control/message.text + String(Autoload.score) # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_tryAgain_pressed():
-	get_tree().change_scene("res://scene/titlescreen.tscn")
-	pass # Replace with function body.

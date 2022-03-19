@@ -23,7 +23,6 @@ func _on_startButton_pressed():
 	
 
 func _on_startButton_item_selected(index):
-	print("hello")
 	yield(get_tree().create_timer(1.0), "timeout")
 	if index == 2:
 		Autoload.yesp2 = true 

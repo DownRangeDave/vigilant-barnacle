@@ -10,6 +10,7 @@ var shipP1 = preload("res://scene/player.tscn")
 var mob = preload("res://scene/Mob.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	var player1 = shipP1.instance()
 	get_tree().get_root().add_child(player1)
 	yield(get_tree().create_timer(0.3), "timeout")

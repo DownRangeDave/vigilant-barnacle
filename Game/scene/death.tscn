@@ -49,6 +49,7 @@ margin_left = 120.0
 margin_top = -16.0
 margin_right = 624.0
 margin_bottom = 216.0
+custom_colors/default_color = Color( 0.654902, 0.27451, 0.27451, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 script = ExtResource( 1 )
 
