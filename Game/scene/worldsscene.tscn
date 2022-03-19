@@ -48,7 +48,6 @@ script = ExtResource( 2 )
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="firstspawner3" type="Area" parent="worldSpawns"]
@@ -95,7 +94,6 @@ shape = SubResource( 5 )
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="firstspawner"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
@@ -160,8 +158,8 @@ autostart = true
 [node name="points" type="RichTextLabel" parent="HUD/Control"]
 margin_left = 704.0
 margin_top = 8.0
-margin_right = 848.0
-margin_bottom = 48.0
+margin_right = 928.0
+margin_bottom = 72.0
 custom_fonts/normal_font = SubResource( 7 )
 text = "Points:"
 
