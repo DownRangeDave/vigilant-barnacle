@@ -36,6 +36,7 @@ spot_angle = 72.3
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67484, 0 )
+visible = false
 amount = 500
 lifetime = 1.04
 speed_scale = 1.2

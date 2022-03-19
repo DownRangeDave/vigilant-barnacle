@@ -9,13 +9,12 @@ extends KinematicBody
 export var min_speed = 10
 # Maximum speed of the mob in meters per second.
 export var max_speed = 18
-
+var changedir=false
 var velocity = Vector3.ZERO
 
 
-func _physics_process(_delta):
-	move_and_collide(Vector3(0,0.3,0))
-	print(self.get_translation().y)
+
+	
 
 func initialize(start_position, player_position):
 	translation = start_position
@@ -35,5 +34,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	
+	move_and_collide(Vector3(rand_range(1,2)*.05,0,0))
+	
+		
