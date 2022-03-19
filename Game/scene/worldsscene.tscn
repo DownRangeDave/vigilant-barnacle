@@ -1,18 +1,20 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://SFX/Raining Bits.ogg" type="AudioStream" id=1]
 [ext_resource path="res://scene/worldsscene.gd" type="Script" id=2]
 [ext_resource path="res://Blender Assests/sun.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://SFX/Boss Battle.wav" type="AudioStream" id=4]
+[ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scene/Control.gd" type="Script" id=6]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.235132, 1, 1 )
+extents = Vector3( 0.234482, 0.983456, 0.911478 )
 
 [sub_resource type="BoxShape" id=5]
 
 [sub_resource type="ParticlesMaterial" id=3]
 
 [sub_resource type="CubeMesh" id=4]
-
 
 [sub_resource type="ConvexPolygonShape" id=9]
 points = PoolVector3Array( 0, 0, 3.70069, -2.17527, 0, 2.99359, -1.02321, -1.65546, 3.1479, 0.972222, -1.94598, 2.99359, 2.17458, 0, 2.99359, 1.02252, 1.65473, 3.1479, -0.972911, 1.94525, 2.99359, -3.51957, 0, 1.14324, -2.54735, -1.94598, 1.84962, -2.67826, 1.65473, 1.94525, -0.601524, -3.14863, 1.84962, 1.57375, -3.14863, 1.14324, 2.67757, -1.65546, 1.94525, 3.51957, 0, 1.14324, 2.54666, 1.94525, 1.84962, 0.600834, 3.1479, 1.84962, -1.57443, 3.1479, 1.14324, -3.14818, 1.94525, 0, -3.51957, 0, -1.14397, -3.3101, -1.65546, 0, -1.94582, -3.14863, 0, 0, -3.70069, 0, 1.57375, -3.14863, -1.14397, 3.14749, -1.94598, 0, 3.30941, 1.65473, 0, 3.51957, 0, -1.14397, 1.94513, 3.1479, 0, 0, 3.70069, 0, -1.57443, 3.1479, -1.14397, -2.67826, 1.65473, -1.94598, -2.17527, 0, -2.99431, -2.54735, -1.94598, -1.85034, -0.601524, -3.14863, -1.85034, 0.972222, -1.94598, -2.99431, 2.67757, -1.65546, -1.94598, 2.54666, 1.94525, -1.85034, 2.17458, 0, -2.99431, 0.600834, 3.1479, -1.85034, -0.972911, 1.94525, -2.99431, 0, 0, -3.70069, -1.02321, -1.65546, -3.14863, 1.02252, 1.65473, -3.14863 )
@@ -40,51 +42,52 @@ font_data = ExtResource( 5 )
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
+[node name="worldSpawns" type="KinematicBody" parent="."]
 
-[node name="firstspawner2" type="Area" parent="KinematicBody"]
+[node name="firstspawner2" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner2"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
-[node name="firstspawner3" type="Area" parent="KinematicBody"]
+[node name="firstspawner3" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 38.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner3"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner3"]
 shape = SubResource( 1 )
 
-[node name="firstspawner4" type="Area" parent="KinematicBody"]
+[node name="firstspawner4" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 48.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner4"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner4"]
 shape = SubResource( 1 )
 
-[node name="firstspawner7" type="Area" parent="KinematicBody"]
+[node name="firstspawner7" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 78.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner7"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner7"]
 shape = SubResource( 1 )
 
-[node name="firstspawner5" type="Area" parent="KinematicBody"]
+[node name="firstspawner5" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 58.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner5"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner5"]
 shape = SubResource( 1 )
 
-[node name="firstspawner6" type="Area" parent="KinematicBody"]
+[node name="firstspawner6" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 68.153, 1.825, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner6"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner6"]
 shape = SubResource( 1 )
 
-[node name="firstspawner8" type="Area" parent="KinematicBody/firstspawner6"]
+[node name="firstspawner8" type="Area" parent="worldSpawns/firstspawner6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner6/firstspawner8"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner6/firstspawner8"]
 shape = SubResource( 1 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
 shape = SubResource( 5 )
 
@@ -92,9 +95,7 @@ shape = SubResource( 5 )
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="firstspawner"]
-
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 shape = SubResource( 1 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
@@ -116,12 +117,6 @@ visibility_aabb = AABB( -49.4444, -25.2846, -7.16898, 99.8751, 50.5692, 14.5538 
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
 
-[node name="bossSpawner" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="bossSpawner"]
-shape = SubResource( 1 )
-
 [node name="levelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 
@@ -130,9 +125,54 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71575, 0, 0 )
 axis_lock_motion_x = true
 move_lock_x = true
 
-[node name="sun" type="MeshInstance" parent="sun"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08951, -3.99561, -41.9651 )
+[node name="CollisionShape2" type="CollisionShape" parent="sun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34142, -17.0154, -15.064 )
+shape = SubResource( 9 )
+
+[node name="sun" type="MeshInstance" parent="sun/CollisionShape2"]
+layers = 2
 mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
 material/0 = null
 
+[node name="bossSpawner" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
+script = SubResource( 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="bossSpawner"]
+shape = SubResource( 1 )
+
+[node name="bossMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+margin_top = 8.0
+margin_right = 1024.0
+margin_bottom = 64.0
+script = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="HUD/Control"]
+process_mode = 0
+autostart = true
+
+[node name="points" type="RichTextLabel" parent="HUD/Control"]
+margin_left = 704.0
+margin_top = 8.0
+margin_right = 848.0
+margin_bottom = 48.0
+custom_fonts/normal_font = SubResource( 7 )
+text = "Points:"
+
+[node name="timer" type="RichTextLabel" parent="HUD/Control"]
+margin_left = 80.0
+margin_top = 8.0
+margin_right = 240.0
+margin_bottom = 48.0
+custom_fonts/normal_font = SubResource( 8 )
+text = "Timer: "
+
+[connection signal="area_entered" from="worldSpawns/firstspawner2" to="." method="_on_firstspawner2_area_entered"]
 [connection signal="body_entered" from="firstspawner" to="." method="_on_firstspawner_body_entered"]
+[connection signal="body_shape_entered" from="bossSpawner" to="." method="_on_bossSpawner_body_shape_entered"]
