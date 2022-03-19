@@ -15,8 +15,9 @@ func _ready():
 	pass # Replace with function body.
 	
 func _on_startButton_pressed():
-	$startButton.hide()
 	emit_signal("start_game")
+	$startButton.hide()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
