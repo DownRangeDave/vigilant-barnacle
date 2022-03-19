@@ -45,3 +45,10 @@ func _process(delta):
 	Autoload.playerPosition2 = $SpaceBody.get_translation()
 	movement()
 	
+
+
+func _on_Area_body_entered(body):
+	print(body.name)
+	if body.name == "Mob" or body.name == "mobBoss":
+		queue_free()
+	
