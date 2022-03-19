@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://ship2.glb" type="PackedScene" id=2]
@@ -9,6 +9,9 @@ ambient_light_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 2.97788, -0.000107288, -2.38419e-07, 2.97788, -0.50004, -2.38419e-07, 2.072, -0.000107288, -2.81581, 2.072, 0.608253, -2.38419e-07, 2.072, -0.000107288, 2.81581, 2.072, -0.50004, 2.81581, 2.072, -0.718323, 0.999976, 2.072, -0.718323, -1.00053, 2.072, -0.50004, -2.81581, 1.53593, -0.000107288, -2.81581, 0.999851, 0.608253, -2.38419e-07, 1.53593, -0.000107288, 2.81581, 1.53593, -0.50004, 2.81581, -1.00031, -0.718323, 0.999976, -1.00031, -0.718323, -1.00053, 1.53593, -0.50004, -2.81581, -2.53728, -0.545229, -0.340676, -2.53728, -0.214754, -0.251373, -1.00031, -0.000107288, -1.00053, -0.640771, 0.0696236, -1.00053, -2.53728, -0.214754, 0.250821, -1.00031, -0.000107288, 0.999976, -0.640771, 0.0696236, 0.999976, -2.53728, -0.545229, 0.340124, -2.53728, -0.613792, -2.38419e-07 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.321537, 0.183607, 0.911208 )
 
 [sub_resource type="ParticlesMaterial" id=2]
 
@@ -32,8 +35,9 @@ script = ExtResource( 1 )
 environment = SubResource( 7 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, -2.5411e-21, 8.74228e-08, -2.5411e-21, 1, 2.2215e-28, -8.74228e-08, 0, -1, 1.06026, 0.582557, -9.40316 )
-current = true
+
+transform = Transform( -1, -2.5411e-21, 8.74228e-08, -2.5411e-21, 1, 2.2215e-28, -8.74228e-08, 0, -1, 1.06026, 0.582557, -15.6981 )
+
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
@@ -44,6 +48,13 @@ transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0
 
 [node name="CollisionShape" type="CollisionShape" parent="SpaceBody"]
 shape = SubResource( 1 )
+
+[node name="Area" type="Area" parent="SpaceBody"]
+transform = Transform( -15, 2.26494e-06, 6.60024e-14, 0, -6.55671e-07, 10, 2.26494e-06, 15, 4.37114e-07, -1.08436, -0.0985446, 0.249176 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="SpaceBody/Area"]
+transform = Transform( 1, -7.10543e-14, 1.27055e-21, 7.10543e-14, 1, -4.23516e-22, 2.5411e-21, 1.69407e-21, 1, -0.0561423, -0.00171177, 0.0130181 )
+shape = SubResource( 8 )
 
 [node name="ship2" parent="SpaceBody" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185083, -0.0257368, 0.121082 )
@@ -111,3 +122,5 @@ speed_scale = 5.0
 visibility_aabb = AABB( -6.74645, -15.8579, -0.588102, 11.4949, 27.2823, 2.51409 )
 process_material = SubResource( 2 )
 draw_pass_1 = SubResource( 4 )
+
+[connection signal="body_entered" from="SpaceBody/Area" to="." method="_on_Area_body_entered"]
