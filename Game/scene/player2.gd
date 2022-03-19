@@ -44,19 +44,24 @@ func _process(delta):
 	Autoload.playerPosition1 = $SpaceBody.get_translation()
 	Autoload.playerPosition2 = $SpaceBody.get_translation()
 	movement()
+	if Autoload.die == true:
+		queue_free()
 	
 
 
 func _on_Area_body_entered(body):
 	print(body.name)
 	if body.name == "Mob" or body.name == "mobBoss":
+		Autoload.die=true
 		queue_free()
 		get_tree().change_scene("res://scene/death.tscn")
 	
 
 
 func _on_Area_area_entered(area):
+	
 	if area.name == "death":
+		Autoload.die=true
 		queue_free()
 		
 		get_tree().change_scene("res://scene/death.tscn")
