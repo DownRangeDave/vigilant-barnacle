@@ -16,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 		$KinematicBody.move_and_collide(Vector3(-.3,0,0))
-		if $KinematicBody.get_translation().x <= Autoload.playerPosition1.x - 60:
+		if $KinematicBody.get_translation().x <= Autoload.playerPosition1.x - 120:
 			queue_free()
 		if $Timer.time_left == 0:
 			queue_free()

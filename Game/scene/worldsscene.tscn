@@ -10,14 +10,14 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.234482, 0.983456, 0.911478 )
 
+[sub_resource type="ConvexPolygonShape" id=9]
+points = PoolVector3Array( 0, 0, 3.70069, -2.17527, 0, 2.99359, -1.02321, -1.65546, 3.1479, 0.972222, -1.94598, 2.99359, 2.17458, 0, 2.99359, 1.02252, 1.65473, 3.1479, -0.972911, 1.94525, 2.99359, -3.51957, 0, 1.14324, -2.54735, -1.94598, 1.84962, -2.67826, 1.65473, 1.94525, -0.601524, -3.14863, 1.84962, 1.57375, -3.14863, 1.14324, 2.67757, -1.65546, 1.94525, 3.51957, 0, 1.14324, 2.54666, 1.94525, 1.84962, 0.600834, 3.1479, 1.84962, -1.57443, 3.1479, 1.14324, -3.14818, 1.94525, 0, -3.51957, 0, -1.14397, -3.3101, -1.65546, 0, -1.94582, -3.14863, 0, 0, -3.70069, 0, 1.57375, -3.14863, -1.14397, 3.14749, -1.94598, 0, 3.30941, 1.65473, 0, 3.51957, 0, -1.14397, 1.94513, 3.1479, 0, 0, 3.70069, 0, -1.57443, 3.1479, -1.14397, -2.67826, 1.65473, -1.94598, -2.17527, 0, -2.99431, -2.54735, -1.94598, -1.85034, -0.601524, -3.14863, -1.85034, 0.972222, -1.94598, -2.99431, 2.67757, -1.65546, -1.94598, 2.54666, 1.94525, -1.85034, 2.17458, 0, -2.99431, 0.600834, 3.1479, -1.85034, -0.972911, 1.94525, -2.99431, 0, 0, -3.70069, -1.02321, -1.65546, -3.14863, 1.02252, 1.65473, -3.14863 )
+
 [sub_resource type="BoxShape" id=5]
 
 [sub_resource type="ParticlesMaterial" id=3]
 
 [sub_resource type="CubeMesh" id=4]
-
-[sub_resource type="ConvexPolygonShape" id=9]
-points = PoolVector3Array( 0, 0, 3.70069, -2.17527, 0, 2.99359, -1.02321, -1.65546, 3.1479, 0.972222, -1.94598, 2.99359, 2.17458, 0, 2.99359, 1.02252, 1.65473, 3.1479, -0.972911, 1.94525, 2.99359, -3.51957, 0, 1.14324, -2.54735, -1.94598, 1.84962, -2.67826, 1.65473, 1.94525, -0.601524, -3.14863, 1.84962, 1.57375, -3.14863, 1.14324, 2.67757, -1.65546, 1.94525, 3.51957, 0, 1.14324, 2.54666, 1.94525, 1.84962, 0.600834, 3.1479, 1.84962, -1.57443, 3.1479, 1.14324, -3.14818, 1.94525, 0, -3.51957, 0, -1.14397, -3.3101, -1.65546, 0, -1.94582, -3.14863, 0, 0, -3.70069, 0, 1.57375, -3.14863, -1.14397, 3.14749, -1.94598, 0, 3.30941, 1.65473, 0, 3.51957, 0, -1.14397, 1.94513, 3.1479, 0, 0, 3.70069, 0, -1.57443, 3.1479, -1.14397, -2.67826, 1.65473, -1.94598, -2.17527, 0, -2.99431, -2.54735, -1.94598, -1.85034, -0.601524, -3.14863, -1.85034, 0.972222, -1.94598, -2.99431, 2.67757, -1.65546, -1.94598, 2.54666, 1.94525, -1.85034, 2.17458, 0, -2.99431, 0.600834, 3.1479, -1.85034, -0.972911, 1.94525, -2.99431, 0, 0, -3.70069, -1.02321, -1.65546, -3.14863, 1.02252, 1.65473, -3.14863 )
 
 [sub_resource type="GDScript" id=6]
 script/source = "extends Area
@@ -43,6 +43,31 @@ font_data = ExtResource( 5 )
 script = ExtResource( 2 )
 
 [node name="worldSpawns" type="KinematicBody" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 0, 0 )
+
+[node name="firstspawner" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner"]
+shape = SubResource( 1 )
+
+[node name="sun" type="KinematicBody" parent="worldSpawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71575, 15.0718, 12.4304 )
+axis_lock_motion_x = true
+move_lock_x = true
+
+[node name="CollisionShape2" type="CollisionShape" parent="worldSpawns/sun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34142, -17.0154, -15.064 )
+shape = SubResource( 9 )
+
+[node name="sun" type="MeshInstance" parent="worldSpawns/sun/CollisionShape2"]
+layers = 2
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="DirectionalLight" type="DirectionalLight" parent="worldSpawns/sun"]
+transform = Transform( -0.13982, -0.93744, 0.318836, -0.376487, 0.348147, 0.858517, -0.91581, 0, -0.401612, -8.341, -11.3356, -15.064 )
 
 [node name="firstspawner2" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
@@ -90,11 +115,13 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
 shape = SubResource( 5 )
 
+
 [node name="firstspawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="firstspawner"]
 shape = SubResource( 1 )
+
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
 
@@ -117,21 +144,6 @@ draw_pass_1 = SubResource( 4 )
 
 [node name="levelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-
-[node name="sun" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71575, 0, 0 )
-axis_lock_motion_x = true
-move_lock_x = true
-
-[node name="CollisionShape2" type="CollisionShape" parent="sun"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34142, -17.0154, -15.064 )
-shape = SubResource( 9 )
-
-[node name="sun" type="MeshInstance" parent="sun/CollisionShape2"]
-layers = 2
-mesh = ExtResource( 3 )
-skeleton = NodePath("../..")
-material/0 = null
 
 [node name="bossSpawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
@@ -171,6 +183,7 @@ margin_bottom = 48.0
 custom_fonts/normal_font = SubResource( 8 )
 text = "Timer: "
 
+[connection signal="body_entered" from="worldSpawns/firstspawner" to="." method="_on_firstspawner_body_entered"]
 [connection signal="area_entered" from="worldSpawns/firstspawner2" to="." method="_on_firstspawner2_area_entered"]
-[connection signal="body_entered" from="firstspawner" to="." method="_on_firstspawner_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner2" to="." method="_on_firstspawner2_body_entered"]
 [connection signal="body_shape_entered" from="bossSpawner" to="." method="_on_bossSpawner_body_shape_entered"]
