@@ -46,11 +46,9 @@ func _process(delta):
 	movement()
 	
 
-func _on_Area_area_entered(area):
-	if area.name=="death":
-		queue_free()
+
 func _on_Area_body_entered(body):
-	#print(body.name)
+	print(body.name)
 	if body.name == "Mob" or body.name == "mobBoss":
 		queue_free()
 		get_tree().change_scene("res://scene/death.tscn")

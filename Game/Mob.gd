@@ -35,14 +35,6 @@ func _ready():
 # Called every ,frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	move_and_collide(Vector3(rand_range(1,3)*.05,0,0))
-		#if check.is_in_group("KinematicBody"):
-			#check.queue_free()
-
-func _on_death_body_entered(body):
-	if body.name == "KinematicBody":
-		queue_free()
+	move_and_collide(Vector3(rand_range(1,2)*.05,0,0))
 	
-		
-
 		
