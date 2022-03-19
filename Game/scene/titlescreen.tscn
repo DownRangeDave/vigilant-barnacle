@@ -3,7 +3,28 @@
 [ext_resource path="res://SFX/Chiptune Techno.mp3" type="AudioStream" id=1]
 [ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scene/HUD.gd" type="Script" id=3]
-[ext_resource path="res://scene/AudioStreamPlayer.gd" type="Script" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	self.play()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if self.playing == false:
+		self.play()			
+#	pass
+"
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
@@ -17,9 +38,9 @@ font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="titleMusics" type="AudioStreamPlayer" parent="."]
+[node name="titleMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
-script = ExtResource( 4 )
+script = SubResource( 1 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 3 )
@@ -59,3 +80,5 @@ text = "Credits"
 [node name="Timer" type="Timer" parent="HUD/Control"]
 wait_time = 2.0
 one_shot = true
+
+[connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]

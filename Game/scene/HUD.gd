@@ -14,11 +14,12 @@ func show_message(text):
 func _ready():
 	pass # Replace with function body.
 	
-func _on_startButton_pressed():
-	emit_signal("start_game")
-	$startButton.hide()
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_credits_pressed():
+	
+	pass # Replace with function body.
