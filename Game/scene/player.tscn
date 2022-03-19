@@ -33,6 +33,7 @@ environment = SubResource( 7 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -2.5411e-21, 8.74228e-08, -2.5411e-21, 1, 2.2215e-28, -8.74228e-08, 0, -1, 1.06026, 0.582557, -9.40316 )
+current = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

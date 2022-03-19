@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SFX/Raining Bits.ogg" type="AudioStream" id=1]
 [ext_resource path="res://scene/worldsscene.gd" type="Script" id=2]
+[ext_resource path="res://Blender Assests/sun.obj" type="ArrayMesh" id=3]
 
 [sub_resource type="BoxShape" id=5]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.737921, 1, 1 )
+extents = Vector3( 0.235132, 1, 1 )
 
 [sub_resource type="ParticlesMaterial" id=3]
 
@@ -20,6 +21,11 @@ script = ExtResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
 shape = SubResource( 5 )
+
+[node name="sun" type="MeshInstance" parent="KinematicBody"]
+transform = Transform( 0.97466, 0, 0.223692, 0, 1, 0, -0.223692, 0, 0.97466, -29.3651, -903.572, -2959.53 )
+mesh = ExtResource( 3 )
+material/0 = null
 
 [node name="firstspawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
@@ -91,7 +97,18 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="bossSpawner"]
 shape = SubResource( 1 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+
+[node name="sun" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71575, 0, 0 )
+axis_lock_motion_x = true
+move_lock_x = true
+
+[node name="sun" type="MeshInstance" parent="sun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.08951, -3.99561, -41.9651 )
+mesh = ExtResource( 3 )
+material/0 = null
 
 [connection signal="body_entered" from="firstspawner" to="." method="_on_firstspawner_body_entered"]
