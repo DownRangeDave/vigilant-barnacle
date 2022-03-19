@@ -7,12 +7,18 @@ extends Spatial
 var mobBoss = preload("res://scene/boss.tscn")
 # Called when the node enters the scene tree for the first time.
 var shipP1 = preload("res://scene/player.tscn")
+var shipP2 = preload("res://scene/player2.tscn")
 var mob = preload("res://scene/Mob.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	var player1 = shipP1.instance()
 	get_tree().get_root().add_child(player1)
+	
+	if Autoload.yesp2 == true:
+		var player2 = shipP2.instance()
+		
+		get_tree().get_root().add_child(player2)
 	yield(get_tree().create_timer(0.3), "timeout")
 	$levelMusic.play()
 		
