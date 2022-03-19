@@ -35,3 +35,51 @@ speed_scale = 1.2
 visibility_aabb = AABB( -49.4444, -25.2846, -7.16898, 99.8751, 50.5692, 14.5538 )
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
+
+[node name="firstspawner2" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner2"]
+shape = SubResource( 1 )
+
+[node name="firstspawner3" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 38.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner3"]
+shape = SubResource( 1 )
+
+[node name="firstspawner4" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 48.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner4"]
+shape = SubResource( 1 )
+
+[node name="firstspawner5" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 58.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner5"]
+shape = SubResource( 1 )
+
+[node name="firstspawner6" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 68.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner6"]
+shape = SubResource( 1 )
+
+[node name="firstspawner7" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 78.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner7"]
+shape = SubResource( 1 )
+
+[node name="firstspawner8" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 88.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner8"]
+shape = SubResource( 1 )
+
+[node name="bossSpawner" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="bossSpawner"]
+shape = SubResource( 1 )
