@@ -82,3 +82,4 @@ wait_time = 2.0
 one_shot = true
 
 [connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]
+[connection signal="pressed" from="HUD/Control/startButton" to="HUD" method="_on_startButton_pressed"]

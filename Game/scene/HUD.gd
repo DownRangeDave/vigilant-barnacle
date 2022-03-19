@@ -14,6 +14,11 @@ func show_message(text):
 func _ready():
 	pass # Replace with function body.
 	
+func _on_startButton_pressed():
+	get_tree().change_scene("res://scene/player.tscn")
+
+	#$startButton.hide()
+	#emit_signal("start_game")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
