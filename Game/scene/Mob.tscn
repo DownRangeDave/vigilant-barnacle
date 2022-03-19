@@ -39,8 +39,4 @@ material/18 = null
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
 transform = Transform( 1.26049, 0, 0, 0, 1.26049, 0, 0, 0, 1.26049, 0.2, 0, 0 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0, 0 )
-fov = 82.9911
-
 [connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
