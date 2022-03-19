@@ -19,8 +19,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#$worldSpawns.move_and_collide(Vector3(5,0,0))
-	pass
+	$worldSpawns.move_and_collide(Vector3(5,0,0))
+
 
 func _on_firstspawner_body_entered(body):
 	
