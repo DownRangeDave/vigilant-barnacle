@@ -70,10 +70,6 @@ margin_bottom = 240.0
 custom_fonts/font = SubResource( 4 )
 text = "Credits"
 
-[node name="Timer" type="Timer" parent="HUD/Control"]
-wait_time = 2.0
-one_shot = true
-
 [node name="startButton" type="OptionButton" parent="HUD/Control"]
 margin_left = 176.0
 margin_top = 136.0
@@ -86,4 +82,5 @@ script = ExtResource( 4 )
 
 [connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]
 [connection signal="item_focused" from="HUD/Control/startButton" to="HUD/Control/startButton" method="_on_startButton_item_focused"]
+[connection signal="item_selected" from="HUD/Control/startButton" to="HUD/Control/startButton" method="_on_startButton_item_selected"]
 [connection signal="pressed" from="HUD/Control/startButton" to="HUD" method="_on_startButton_pressed"]

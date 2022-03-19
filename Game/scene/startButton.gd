@@ -19,9 +19,9 @@ func _ready():
 #func _process(delta):
 #	pass
 func _on_startButton_pressed():
-	remove_item(0)
 	get_popup()
-	get_tree().change_scene("res://scene/player.tscn")
+	
 
-func _on_startButton_item_focused(index):
-		select(index)
+func _on_startButton_item_selected(index):
+	print("hello")
+	get_tree().change_scene("res://scene/player.tscn")
