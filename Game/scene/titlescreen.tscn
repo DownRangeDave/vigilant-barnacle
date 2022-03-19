@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://SFX/Chiptune Techno.mp3" type="AudioStream" id=1]
 [ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scene/HUD.gd" type="Script" id=3]
+[ext_resource path="res://scene/startButton.gd" type="Script" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends AudioStreamPlayer2D
@@ -30,10 +31,10 @@ func _process(delta):
 size = 64
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
@@ -61,14 +62,6 @@ custom_colors/default_color = Color( 0.654902, 0.27451, 0.27451, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "Vigilant Warden"
 
-[node name="startButton" type="Button" parent="HUD/Control"]
-margin_left = 176.0
-margin_top = 144.0
-margin_right = 323.0
-margin_bottom = 179.0
-custom_fonts/font = SubResource( 3 )
-text = "Start"
-
 [node name="credits" type="Button" parent="HUD/Control"]
 margin_left = 176.0
 margin_top = 200.0
@@ -81,5 +74,16 @@ text = "Credits"
 wait_time = 2.0
 one_shot = true
 
+[node name="startButton" type="OptionButton" parent="HUD/Control"]
+margin_left = 176.0
+margin_top = 136.0
+margin_right = 323.0
+margin_bottom = 176.0
+custom_fonts/font = SubResource( 5 )
+text = "Start"
+align = 1
+script = ExtResource( 4 )
+
 [connection signal="pressed" from="HUD/Control/credits" to="HUD" method="_on_credits_pressed"]
+[connection signal="item_focused" from="HUD/Control/startButton" to="HUD/Control/startButton" method="_on_startButton_item_focused"]
 [connection signal="pressed" from="HUD/Control/startButton" to="HUD" method="_on_startButton_pressed"]
