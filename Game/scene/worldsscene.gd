@@ -9,6 +9,7 @@ var mobBoss = preload("res://scene/boss.tscn")
 var shipP1 = preload("res://scene/player.tscn")
 var shipP2 = preload("res://scene/player2.tscn")
 var mob = preload("res://scene/Mob.tscn")
+var spawners = preload("res://usthisspawner.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -2564,3 +2565,8 @@ func _on_firstspawner9_body_entered(body):
 			get_tree().get_root().add_child(enemy13)
 			get_tree().get_root().add_child(enemy14)
 			get_tree().get_root().add_child(enemy15)
+func _on_firstspawner11_body_entered(body):
+	if body.name == "SpaceBody":
+		var test = spawners.instance()
+		test.translation = Vector3(Autoload.playerPosition1.x-30, 0,0)
+		get_tree().get_root().add_child(test)
