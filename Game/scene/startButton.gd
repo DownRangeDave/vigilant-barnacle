@@ -24,4 +24,5 @@ func _on_startButton_pressed():
 
 func _on_startButton_item_selected(index):
 	print("hello")
+	yield(get_tree().create_timer(1.0), "timeout")
 	get_tree().change_scene("res://scene/player.tscn")
