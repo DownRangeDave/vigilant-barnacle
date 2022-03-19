@@ -35,7 +35,7 @@ func movement():
 				
 				get_tree().get_root().add_child(object)
 			#object.set_translation = Vector3($SpaceBody.get_translation())                 
-				object.translation = Vector3($SpaceBody.get_translation().x-5,$SpaceBody.get_translation().y,
+				object.translation = Vector3($SpaceBody.get_translation().x-2.5,$SpaceBody.get_translation().y,
 				$SpaceBody.get_translation().z)
 	
 			

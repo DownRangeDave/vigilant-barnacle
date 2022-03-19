@@ -25,8 +25,12 @@ settings/stdout/print_fps=true
 
 [display]
 
+window/size/height=640
 window/vsync/use_vsync=false
 
+[global]
+
+fps=true
 
 [physics]
 

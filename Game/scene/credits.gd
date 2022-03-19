@@ -12,5 +12,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var texture = $Viewport.get_texture()
+#func _process(delta):
+#	pass

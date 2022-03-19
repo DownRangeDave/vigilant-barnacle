@@ -1,16 +1,25 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SFX/Raining Bits.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scene/worldsscene.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=5]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.235132, 1, 1 )
-
-[sub_resource type="Environment" id=2]
-background_mode = 1
+extents = Vector3( 0.737921, 1, 1 )
 
 [sub_resource type="ParticlesMaterial" id=3]
 
 [sub_resource type="CubeMesh" id=4]
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
+shape = SubResource( 5 )
 
 [node name="firstspawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
@@ -20,12 +29,10 @@ shape = SubResource( 1 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( -4.37114e-08, -1, 0, -1, 4.37114e-08, 8.74228e-08, -8.74228e-08, 3.82137e-15, -1, 4.08841, 0, -26.2397 )
+visible = false
 light_color = Color( 0, 0, 0, 1 )
 spot_range = 62.2
 spot_angle = 72.3
-
-[node name="Camera" type="Camera" parent="."]
-environment = SubResource( 2 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67484, 0 )
@@ -35,3 +42,8 @@ speed_scale = 1.2
 visibility_aabb = AABB( -49.4444, -25.2846, -7.16898, 99.8751, 50.5692, 14.5538 )
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[connection signal="body_entered" from="firstspawner" to="." method="_on_firstspawner_body_entered"]
