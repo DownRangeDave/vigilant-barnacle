@@ -4,6 +4,7 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+
 var shipP1 = preload("res://scene/player.tscn")
 var mob = preload("res://scene/Mob.tscn")
 # Called when the node enters the scene tree for the first time.
