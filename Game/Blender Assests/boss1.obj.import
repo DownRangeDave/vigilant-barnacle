@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/boss1.obj-c488ae084a85605f09dce79ad787a173.mesh"
+
+[deps]
+
+files=[ "res://.import/boss1.obj-c488ae084a85605f09dce79ad787a173.mesh" ]
+
+source_file="res://Blender Assests/boss1.obj"
+dest_files=[ "res://.import/boss1.obj-c488ae084a85605f09dce79ad787a173.mesh", "res://.import/boss1.obj-c488ae084a85605f09dce79ad787a173.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

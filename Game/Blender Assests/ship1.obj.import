@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ship1.obj-07b8951ad80a35b3951dc14156898ba0.mesh"
+
+[deps]
+
+files=[ "res://.import/ship1.obj-07b8951ad80a35b3951dc14156898ba0.mesh" ]
+
+source_file="res://Blender Assests/ship1.obj"
+dest_files=[ "res://.import/ship1.obj-07b8951ad80a35b3951dc14156898ba0.mesh", "res://.import/ship1.obj-07b8951ad80a35b3951dc14156898ba0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
