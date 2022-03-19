@@ -21,6 +21,8 @@ func _process(delta):
 		
 func _on_Area_body_entered(body):
 	print(body.name)
+	if body.name == "Mob":
+		queue_free()
 	if body.name == "SpaceBody":
 		queue_free()
 		
