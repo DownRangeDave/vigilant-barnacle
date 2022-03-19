@@ -52,7 +52,7 @@ linear_accel = 3.67
 [sub_resource type="CubeMesh" id=12]
 size = Vector3( 0.1, 0.1, 0.1 )
 
-[node name="Spatial" type="Spatial"]
+[node name="Spatial3" type="Spatial"]
 script = ExtResource( 2 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -89,6 +89,204 @@ shape = SubResource( 1 )
 transform = Transform( 10, 6.6815e-21, -1.21973e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 433.887, -3.79317e-05, -1.32972e-18 )
 
 [node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner10"]
+shape = SubResource( 1 )
+
+[node name="firstspawner16" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.0842e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 414.69, -3.62534e-05, -8.75939e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner16"]
+shape = SubResource( 1 )
+
+[node name="firstspawner17" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -9.48677e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 404.181, -3.53347e-05, -7.49023e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner17"]
+shape = SubResource( 1 )
+
+[node name="firstspawner18" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -7.45389e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 377.806, -3.3029e-05, -4.81781e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner18"]
+shape = SubResource( 1 )
+
+[node name="firstspawner19" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -6.09864e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 474.988, -4.15248e-05, -4.24048e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner19"]
+shape = SubResource( 1 )
+
+[node name="firstspawner20" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -4.74338e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 535.503, -4.68152e-05, -3.30891e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner20"]
+shape = SubResource( 1 )
+
+[node name="firstspawner21" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -3.38813e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 508.97, -4.44956e-05, -1.84884e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner21"]
+shape = SubResource( 1 )
+
+[node name="firstspawner22" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -2.03288e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 490.999, -4.29246e-05, 1.43785e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner22"]
+shape = SubResource( 1 )
+
+[node name="firstspawner23" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -6.77626e-21, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 560.313, -4.89842e-05, 2.016e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner23"]
+shape = SubResource( 1 )
+
+[node name="firstspawner24" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 6.77626e-21, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 597.537, -5.22385e-05, 7.48412e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner24"]
+shape = SubResource( 1 )
+
+[node name="firstspawner25" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 2.03288e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 577.436, -5.04812e-05, 1.49954e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner25"]
+shape = SubResource( 1 )
+
+[node name="firstspawner26" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 3.38813e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 454.797, -3.97597e-05, 2.19618e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner26"]
+shape = SubResource( 1 )
+
+[node name="firstspawner27" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 4.74338e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 623.015, -5.44658e-05, 1.18299e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner27"]
+shape = SubResource( 1 )
+
+[node name="firstspawner28" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 6.09864e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 654.223, -5.71941e-05, 1.15362e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner28"]
+shape = SubResource( 1 )
+
+[node name="firstspawner29" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 8.13152e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 637.833, -5.57612e-05, 2.00999e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner29"]
+shape = SubResource( 1 )
+
+[node name="firstspawner30" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 3.38813e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 820.16, -7.17008e-05, 2.00733e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner30"]
+shape = SubResource( 1 )
+
+[node name="firstspawner31" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 4.74338e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 800.059, -6.99435e-05, 9.26812e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner31"]
+shape = SubResource( 1 )
+
+[node name="firstspawner32" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 6.09864e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 677.42, -5.9222e-05, 2.03492e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner32"]
+shape = SubResource( 1 )
+
+[node name="firstspawner33" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 7.45389e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 845.638, -7.39281e-05, 1.15828e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner33"]
+shape = SubResource( 1 )
+
+[node name="firstspawner34" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 8.80914e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 876.846, -7.66564e-05, 2.2292e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner34"]
+shape = SubResource( 1 )
+
+[node name="firstspawner35" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.0842e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 860.456, -7.52236e-05, 2.37787e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner35"]
+shape = SubResource( 1 )
+
+[node name="firstspawner36" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 5.42101e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 757.535, -6.62259e-05, 5.61733e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner36"]
+shape = SubResource( 1 )
+
+[node name="firstspawner37" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 8.13152e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 737.434, -6.44686e-05, 9.5041e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner37"]
+shape = SubResource( 1 )
+
+[node name="firstspawner38" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 9.48677e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 614.795, -5.37472e-05, 3.29566e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner38"]
+shape = SubResource( 1 )
+
+[node name="firstspawner39" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.0842e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 783.013, -6.84532e-05, 5.37251e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner39"]
+shape = SubResource( 1 )
+
+[node name="firstspawner40" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.21973e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 814.221, -7.11816e-05, 4.78303e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner40"]
+shape = SubResource( 1 )
+
+[node name="firstspawner41" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.42302e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 797.831, -6.97487e-05, 5.20354e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner41"]
+shape = SubResource( 1 )
+
+[node name="firstspawner42" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 8.80914e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1087.91, -9.51086e-05, -1.49723e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner42"]
+shape = SubResource( 1 )
+
+[node name="firstspawner43" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.01644e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1067.81, -9.33513e-05, 2.64819e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner43"]
+shape = SubResource( 1 )
+
+[node name="firstspawner44" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.15196e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 945.174, -8.26298e-05, 2.20843e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner44"]
+shape = SubResource( 1 )
+
+[node name="firstspawner45" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.28749e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1113.39, -9.73359e-05, 7.84995e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner45"]
+shape = SubResource( 1 )
+
+[node name="firstspawner46" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.42302e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1144.6, -0.000100064, 3.31521e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner46"]
+shape = SubResource( 1 )
+
+[node name="firstspawner47" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 1.49078e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1128.21, -9.86314e-05, 4.09114e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner47"]
+shape = SubResource( 1 )
+
+[node name="firstspawner15" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, 5.42101e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 1551.36, -0.775801, -0.155212 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner15"]
 shape = SubResource( 1 )
 
 [node name="firstspawner11" type="Area" parent="worldSpawns"]
@@ -245,6 +443,39 @@ draw_pass_1 = SubResource( 12 )
 [connection signal="body_entered" from="worldSpawns/firstspawner8" to="." method="_on_firstspawner8_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner9" to="." method="_on_firstspawner9_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner10" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner16" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner17" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner18" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner19" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner20" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner21" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner22" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner23" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner24" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner25" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner26" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner27" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner28" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner29" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner30" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner31" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner32" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner33" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner34" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner35" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner36" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner37" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner38" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner39" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner40" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner41" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner42" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner43" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner44" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner45" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner46" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner47" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner15" to="." method="_on_firstspawner15_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner11" to="." method="_on_firstspawner11_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner12" to="." method="_on_firstspawner11_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner13" to="." method="_on_firstspawner11_body_entered"]
