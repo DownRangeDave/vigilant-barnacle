@@ -3,10 +3,10 @@
 [ext_resource path="res://SFX/Raining Bits.ogg" type="AudioStream" id=1]
 [ext_resource path="res://scene/worldsscene.gd" type="Script" id=2]
 
-[sub_resource type="BoxShape" id=5]
-
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.737921, 1, 1 )
+
+[sub_resource type="BoxShape" id=5]
 
 [sub_resource type="ParticlesMaterial" id=3]
 
@@ -15,17 +15,59 @@ extents = Vector3( 0.737921, 1, 1 )
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
-shape = SubResource( 5 )
-
 [node name="firstspawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="firstspawner"]
 shape = SubResource( 1 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+
+[node name="firstspawner2" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner2"]
+shape = SubResource( 1 )
+
+[node name="firstspawner3" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 38.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner3"]
+shape = SubResource( 1 )
+
+[node name="firstspawner4" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 48.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner4"]
+shape = SubResource( 1 )
+
+[node name="firstspawner7" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 78.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner7"]
+shape = SubResource( 1 )
+
+[node name="firstspawner5" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 58.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner5"]
+shape = SubResource( 1 )
+
+[node name="firstspawner6" type="Area" parent="KinematicBody"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 68.153, 1.825, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner6"]
+shape = SubResource( 1 )
+
+[node name="firstspawner8" type="Area" parent="KinematicBody/firstspawner6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody/firstspawner6/firstspawner8"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8795, 0 )
+shape = SubResource( 5 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( -4.37114e-08, -1, 0, -1, 4.37114e-08, 8.74228e-08, -8.74228e-08, 3.82137e-15, -1, 4.08841, 0, -26.2397 )
@@ -44,53 +86,12 @@ visibility_aabb = AABB( -49.4444, -25.2846, -7.16898, 99.8751, 50.5692, 14.5538 
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 4 )
 
-[node name="firstspawner2" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 28.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner2"]
-shape = SubResource( 1 )
-
-[node name="firstspawner3" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 38.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner3"]
-shape = SubResource( 1 )
-
-[node name="firstspawner4" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 48.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner4"]
-shape = SubResource( 1 )
-
-[node name="firstspawner5" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 58.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner5"]
-shape = SubResource( 1 )
-
-[node name="firstspawner6" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 68.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner6"]
-shape = SubResource( 1 )
-
-[node name="firstspawner7" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 78.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner7"]
-shape = SubResource( 1 )
-
-[node name="firstspawner8" type="Area" parent="."]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 88.153, 1.825, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="firstspawner8"]
-shape = SubResource( 1 )
-
 [node name="bossSpawner" type="Area" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 110, 1.825, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="bossSpawner"]
 shape = SubResource( 1 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 

@@ -30,10 +30,9 @@ func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 	
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	#set_translation(Vector3(self.get_translation().x,self.get_translation().y+rand_range(-5,5),self.get_translation().z))
+	pass
+# Called every ,frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
 	move_and_collide(Vector3(rand_range(1,2)*.05,0,0))
