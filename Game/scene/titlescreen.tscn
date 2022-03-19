@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 440.0
+margin_top = 118.0
+margin_right = 545.0
+margin_bottom = 139.0
+text = "Vigilant Warden"
