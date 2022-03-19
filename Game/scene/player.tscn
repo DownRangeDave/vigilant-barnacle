@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://PlayerMovement.gd" type="Script" id=1]
 [ext_resource path="res://ship2.glb" type="PackedScene" id=2]
@@ -36,9 +36,7 @@ script = ExtResource( 1 )
 environment = SubResource( 7 )
 
 [node name="Camera" type="Camera" parent="."]
-
 transform = Transform( -1, -2.5411e-21, 8.74228e-08, -2.5411e-21, 1, 2.2215e-28, -8.74228e-08, 0, -1, 1.06026, 0.582557, -15.6981 )
-
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
@@ -126,4 +124,5 @@ draw_pass_1 = SubResource( 4 )
 
 [node name="bulletSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
 [connection signal="body_entered" from="SpaceBody/Area" to="." method="_on_Area_body_entered"]
