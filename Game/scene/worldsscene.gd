@@ -2570,3 +2570,6 @@ func _on_firstspawner11_body_entered(body):
 		var test = spawners.instance()
 		test.translation = Vector3(Autoload.playerPosition1.x-30, 0,0)
 		get_tree().get_root().add_child(test)
+func _on_firstspawner15_body_entered(body):
+	if body.name == "SpaceBody":
+		get_tree().change_scene("res://scene/win.tscn")
