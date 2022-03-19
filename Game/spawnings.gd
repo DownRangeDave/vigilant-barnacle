@@ -7,7 +7,8 @@ extends KinematicBody
 
 var mob = preload("res://scene/Mob.tscn")
 func _process(delta):
-	$worldSpawns.move_and_collide(Vector3(.5,0,0))
+	pass
+	#$worldSpawns.move_and_collide(Vector3(.5,0,0))
 	#$sun.rotate_z(deg2rad(4*PI*.01))
 
 func _on_firstspawner_body_entered(body):

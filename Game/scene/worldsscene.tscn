@@ -91,6 +91,34 @@ transform = Transform( 10, 6.6815e-21, -1.21973e-19, 6.68148e-21, 10, 0, 2.1684e
 [node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner10"]
 shape = SubResource( 1 )
 
+[node name="firstspawner11" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -1.0842e-19, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 459.469, -4.01681e-05, -1.22945e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner11"]
+transform = Transform( 10, 6.68149e-21, -1.69407e-21, 6.68148e-21, 10, 0, -6.77626e-21, 0, 1, 0.798458, -6.98042e-08, -2.1368e-20 )
+shape = SubResource( 1 )
+
+[node name="firstspawner12" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -6.09864e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 33.1088, -2.89447e-06, 1.30631e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner12"]
+transform = Transform( 10, 6.68149e-21, -1.69407e-21, 6.68148e-21, 10, 0, -6.77626e-21, 0, 1, 0.798458, -6.98042e-08, -2.1368e-20 )
+shape = SubResource( 1 )
+
+[node name="firstspawner13" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -4.74338e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 97.377, -8.51297e-06, 1.02127e-18 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner13"]
+transform = Transform( 10, 6.68149e-21, -1.69407e-21, 6.68148e-21, 10, 0, -6.77626e-21, 0, 1, 0.798458, -6.98042e-08, -2.1368e-20 )
+shape = SubResource( 1 )
+
+[node name="firstspawner14" type="Area" parent="worldSpawns"]
+transform = Transform( 10, 6.6815e-21, -3.38813e-20, 6.68148e-21, 10, 0, 2.1684e-19, 0, 10, 173.416, -1.51605e-05, 7.76478e-19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="worldSpawns/firstspawner14"]
+transform = Transform( 10, 6.68149e-21, -1.69407e-21, 6.68148e-21, 10, 0, -6.77626e-21, 0, 1, 0.798458, -6.98042e-08, -2.1368e-20 )
+shape = SubResource( 1 )
+
 [node name="firstspawner5" type="Area" parent="worldSpawns"]
 transform = Transform( 10, 6.6815e-21, -6.09864e-20, 6.68149e-21, 10, 0, 1.0842e-19, 0, 10, 240.39, 0.0806484, -0.0410499 )
 
@@ -217,6 +245,10 @@ draw_pass_1 = SubResource( 12 )
 [connection signal="body_entered" from="worldSpawns/firstspawner8" to="." method="_on_firstspawner8_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner9" to="." method="_on_firstspawner9_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner10" to="." method="_on_firstspawner10_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner11" to="." method="_on_firstspawner11_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner12" to="." method="_on_firstspawner11_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner13" to="." method="_on_firstspawner11_body_entered"]
+[connection signal="body_entered" from="worldSpawns/firstspawner14" to="." method="_on_firstspawner11_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner5" to="." method="_on_firstspawner4_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner4" to="." method="_on_firstspawner4_body_entered"]
 [connection signal="body_entered" from="worldSpawns/firstspawner2" to="." method="_on_firstspawner2_body_entered"]
