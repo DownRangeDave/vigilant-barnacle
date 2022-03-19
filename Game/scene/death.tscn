@@ -1,12 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://RichTextLabel.gd" type="Script" id=1]
 [ext_resource path="res://font/pdark.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scene/tryAgain.gd" type="Script" id=3]
+[ext_resource path="res://SFX/mixkit-player-losing-or-failing-2042.wav" type="AudioStream" id=4]
+[ext_resource path="res://scene/AudioStreamPlayer.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 5
+emission_ring_radius = 551.01
+emission_ring_inner_radius = 0.0
+emission_ring_height = 0.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+gravity = Vector3( 50, 0, 0 )
+initial_velocity = 156.86
+angular_velocity_random = 0.18
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -13.73
+linear_accel_random = 0.11
+scale = 20.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -37,5 +55,16 @@ margin_right = 344.0
 margin_bottom = 160.0
 text = "Try Again?"
 script = ExtResource( 3 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 104, 264 )
+amount = 30
+lifetime = 3.0
+speed_scale = 3.18
+process_material = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [connection signal="pressed" from="CanvasLayer/Control/tryAgain" to="CanvasLayer/Control/tryAgain" method="_on_tryAgain_pressed"]

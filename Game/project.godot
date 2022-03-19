@@ -22,9 +22,6 @@ Autoload="*res://Autoload.gd"
 
 settings/fps/force_fps=144
 
-[global]
-
-fps=false
 
 [physics]
 
