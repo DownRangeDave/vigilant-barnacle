@@ -72,8 +72,8 @@ text = "Game Credits: "
 [node name="references" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 120.0
 margin_top = 184.0
-margin_right = 504.0
-margin_bottom = 400.0
+margin_right = 512.0
+margin_bottom = 416.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
@@ -81,12 +81,16 @@ bbcode_text = "Gundatsch - [url]https://soundcloud.com/gundatsch[/url]
 
 Nicole Marie T - [url]http://gudstuff.wixsite.com/musicvsart/contact-donate[/url]
 
-[url]https://mixkit.co/free-sound-effects/space-shooter/[/url]"
+[url]https://mixkit.co/free-sound-effects/space-shooter/[/url]
+
+ FoxSynergy"
 text = "Gundatsch - https://soundcloud.com/gundatsch
 
 Nicole Marie T - http://gudstuff.wixsite.com/musicvsart/contact-donate
 
-https://mixkit.co/free-sound-effects/space-shooter/"
+https://mixkit.co/free-sound-effects/space-shooter/
+
+ FoxSynergy"
 script = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
@@ -108,18 +112,18 @@ text = "Home"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 80.0
-margin_top = 408.0
+margin_top = 440.0
 margin_right = 272.0
-margin_bottom = 448.0
+margin_bottom = 480.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "Open Source Fonts"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 112.0
-margin_top = 448.0
+margin_top = 480.0
 margin_right = 256.0
-margin_bottom = 504.0
+margin_bottom = 536.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "Ænigma Fonts"

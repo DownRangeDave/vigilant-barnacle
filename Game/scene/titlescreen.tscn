@@ -16,6 +16,7 @@ script/source = "extends AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Autoload.score = 0
 	self.play()
 	pass # Replace with function body.
 
