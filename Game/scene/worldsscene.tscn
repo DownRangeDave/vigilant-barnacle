@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.235132, 1, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="firstspawner" type="Area" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 1, 18.1532, 1.82507, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="firstspawner"]
+shape = SubResource( 1 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -4.37114e-08, -1, 0, -1, 4.37114e-08, 8.74228e-08, -8.74228e-08, 3.82137e-15, -1, 4.08841, 0, -26.2397 )
+light_color = Color( 0, 0, 0, 1 )
+spot_range = 62.2
+spot_angle = 72.3
+
+[node name="Camera" type="Camera" parent="."]
+environment = SubResource( 2 )
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67484, 0 )
+amount = 500
+lifetime = 1.04
+speed_scale = 1.2
+visibility_aabb = AABB( -49.4444, -25.2846, -7.16898, 99.8751, 50.5692, 14.5538 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )
