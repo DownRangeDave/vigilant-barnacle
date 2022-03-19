@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/crystalshield.obj-bfdbea63031927fe10f0b05405b462df.mesh"
+
+[deps]
+
+files=[ "res://.import/crystalshield.obj-bfdbea63031927fe10f0b05405b462df.mesh" ]
+
+source_file="res://Blender Assests/crystalshield.obj"
+dest_files=[ "res://.import/crystalshield.obj-bfdbea63031927fe10f0b05405b462df.mesh", "res://.import/crystalshield.obj-bfdbea63031927fe10f0b05405b462df.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
