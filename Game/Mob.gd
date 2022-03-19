@@ -38,3 +38,16 @@ func _process(delta):
 	move_and_collide(Vector3(rand_range(1,2)*.05,0,0))
 	
 		
+
+
+func _on_death_area_entered(area):
+	if area.name == "KinematicBody":
+		Autoload.score+=1
+		queue_free()
+		
+
+
+func _on_death_body_entered(body):
+	if body.name == "KinematicBody":
+		Autoload.score+=1
+		queue_free()
