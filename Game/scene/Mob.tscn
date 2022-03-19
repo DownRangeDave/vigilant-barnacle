@@ -50,6 +50,11 @@ transform = Transform( 2.5, 0, 0, 0, 2.5, -2.08797e-22, -1.69407e-21, -2.08797e-
 transform = Transform( 1, 0, 2.11758e-22, -7.10543e-15, 1, 7.10543e-15, 4.23516e-22, -7.10543e-15, 1, 0.061487, -2.54045e-09, 1.11047e-16 )
 shape = SubResource( 2 )
 
+[node name="SpotLight" type="SpotLight" parent="death"]
+transform = Transform( -3.49691e-08, 0, 0.8, -2.02416e-15, 0.8, 3.55271e-15, -0.8, -6.6815e-23, -3.49691e-08, -0.15185, 6.6376e-09, -2.90139e-16 )
+spot_range = 1.007
+spot_angle = 17.2661
+
 [connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
 [connection signal="area_entered" from="death" to="." method="_on_death_area_entered"]
 [connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]
