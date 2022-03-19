@@ -18,6 +18,7 @@ script/source = "extends AudioStreamPlayer2D
 func _ready():
 	Autoload.score = 0
 	self.play()
+	Autoload.score=0
 	pass # Replace with function body.
 
 
@@ -54,7 +55,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 2 )
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="titleMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
