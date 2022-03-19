@@ -36,6 +36,12 @@ script = ExtResource( 4 )
 margin_right = 40.0
 margin_bottom = 40.0
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+light_mask = 16
+margin_right = 1024.0
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 1 )
+
 [node name="title" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 368.0
 margin_top = 16.0
@@ -47,9 +53,9 @@ text = "Game Credits: "
 
 [node name="references" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 120.0
-margin_top = 192.0
-margin_right = 440.0
-margin_bottom = 320.0
+margin_top = 184.0
+margin_right = 504.0
+margin_bottom = 400.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
@@ -57,7 +63,7 @@ bbcode_text = "Gundatsch - [url]https://soundcloud.com/gundatsch[/url]
 
 Nicole Marie T - [url]http://gudstuff.wixsite.com/musicvsart/contact-donate[/url]
 
-https://mixkit.co/free-sound-effects/space-shooter/"
+[url]https://mixkit.co/free-sound-effects/space-shooter/[/url]"
 text = "Gundatsch - https://soundcloud.com/gundatsch
 
 Nicole Marie T - http://gudstuff.wixsite.com/musicvsart/contact-donate
@@ -84,18 +90,18 @@ text = "Home"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/Control"]
 margin_left = 80.0
-margin_top = 328.0
+margin_top = 408.0
 margin_right = 272.0
-margin_bottom = 368.0
+margin_bottom = 448.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "Open Source Fonts"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="CanvasLayer/Control"]
-margin_left = 120.0
-margin_top = 376.0
-margin_right = 264.0
-margin_bottom = 432.0
+margin_left = 112.0
+margin_top = 448.0
+margin_right = 256.0
+margin_bottom = 504.0
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 5 )
 text = "Ænigma Fonts"
