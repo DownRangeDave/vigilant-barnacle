@@ -4,7 +4,8 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var mobBoss = preload("res://scene/boss.tscn")
+# Called when the node enters the scene tree for the first time.
 var shipP1 = preload("res://scene/player.tscn")
 var mob = preload("res://scene/Mob.tscn")
 # Called when the node enters the scene tree for the first time.
@@ -12,7 +13,7 @@ func _ready():
 	var player1 = shipP1.instance()
 	get_tree().get_root().add_child(player1)
 	yield(get_tree().create_timer(0.3), "timeout")
-	$AudioStreamPlayer.play()
+	$levelMusic.play()
 		
 
 
@@ -26,3 +27,19 @@ func _on_firstspawner_body_entered(body):
 	if body.name == "SpaceBody":
 		var enemy = mob.instance()
 		get_tree().get_root().add_child(enemy)
+		
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+func _on_bossSpawner_body_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "SpaceBody":
+		var boss = mobBoss.instance()
+		boss.translation = Vector3(Autoload.playerPosition1.x-100)
+		$levelMusic.stop()
+		$bossMusic.play()
+		
+		get_tree().get_root().add_child(boss)
